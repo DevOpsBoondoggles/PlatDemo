@@ -1,6 +1,6 @@
 # Local .terraform directories
 **/.terraform/*
-
+azure-credentials.json
 # .tfstate files
 *.tfstate
 *.tfstate.*

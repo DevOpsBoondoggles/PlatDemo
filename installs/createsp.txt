@@ -1,0 +1,11 @@
+#save into azure-cedentials.json
+az ad sp create-for-rbac --sdk-auth --role Owner --scopes /subscriptions/3a6a8d54-fdf9-4100-aa23-4a6a49e24527
+
+kubectl create secret \
+generic azure-secret \
+-n crossplane-system \
+--from-file=creds=./azure-credentials.json
+
+
+
+apply azuresecretadd
